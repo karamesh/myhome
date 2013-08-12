@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
 	
     });
 
-app.use(express.static(__dirname + '/Scripts'))
+app.use("Scripts",express.static(__dirname + '/Scripts'))
 
 
 
