@@ -8,7 +8,8 @@ app.get('/', function(request, response) {
 	
     });
 
-app.use("/Scripts")
+app.use("/cssfiles", express.static(Scripts + '/cssfiles'))
+app.use("/jsfiles", express.static(Scripts + '/jsfiles'))
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
