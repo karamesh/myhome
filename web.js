@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
 	    response.send(message);
     });
 
-app.use("/Scripts", express.static(Scripts)
+app.use("/Scripts", express.static(Scripts))
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
