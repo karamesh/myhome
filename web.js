@@ -3,8 +3,9 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-	var message = fs.readFileSync("index.html").toString()
-	    response.send(message);
+	//	var message = fs.readFileSync("index.html").toString()
+	//    response.send(message);
+	reponse.send("Hello World")
     });
 
 app.use("/Scripts", express.static(Scripts))
