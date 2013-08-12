@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-var app = express.createServer(express.logger());
+var app = express();
 
 app.get('/', function(request, response) {
 	var message = fs.readFileSync("index.html").toString()
@@ -8,8 +8,9 @@ app.get('/', function(request, response) {
 	
     });
 
-//app.use("/cssfiles", express.static(Scripts + '/cssfiles'))
-//app.use("/jsfiles", express.static(Scripts + '/jsfiles'))
+app.use(express.static(Scripts + '/cssfiles'))
+app.use(express.static(Scripts + '/jsfiles'))
+
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
