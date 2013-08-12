@@ -8,8 +8,8 @@ app.get('/', function(request, response) {
 	
     });
 
-app.use('/Scripts', express.static(__dirname + '/cssfiles'))
 app.use('/Scripts', express.static(__dirname + '/jsfiles'))
+app.use('/Scripts', express.static(__dirname + '/cssfiles'))
 
 
 
