@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
 	
     });
 
-//app.use("/Scripts", express.static(Scripts + "/"))
+app.use("/Scripts")
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
